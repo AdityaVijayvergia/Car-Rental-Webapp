@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+    <script>
+    window.onload = function () {
+        var select = document.getElementById("year");
+        var options = "<%= options %>";
+        
+        for(var i = 0; i < options.length; i++) {
+            var option = document.createElement('option');
+            option.text = option.value = options[i];
+            select.add(option, 0);
+        }
+    };
+    </script>
+    </head>
+
+    <body>
+
+        <form action="<%= action %>" method="POST">
+            <select id="year" name="year"></select>
+        </form>
+
+    </body>
+    </html> 

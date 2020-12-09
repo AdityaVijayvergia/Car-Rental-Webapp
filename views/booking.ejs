@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('header'); %>
+</header>
+
+<main>
+
+
+    <div class="jumbotron">
+        <h2> <%= headline %> </h2>
+
+        <form action= <%= formaction %> method="POST">
+            
+            <select id="year" name="list">
+                <% all_options.forEach(opt=>{ 
+                    opt = word + opt;%>
+                    <option value= <%= opt %> > <%= opt %> </option>
+                <% }); %>
+            </select>
+
+            
+            <input type="submit">
+        </form>
+    </div>
+</main>
+
+<footer>
+    <%- include('footer'); %>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>This is great</h1>
+        <p>Welcome to templating using EJS</p>
+    </div>
+
+    <div class="jumbotron">
+        <h2>Variables passed:</h2>
+        <p> <%= tagline %> </p>
+
+        <ul>
+            <% mascots.forEach(function(mascot) { %>
+                <li>
+                    <strong><%= mascot.name %></strong>
+                    representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                </li>
+            <% }); %>
+        </ul>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('footer'); %>
+</footer>
+
+</body>
+</html>

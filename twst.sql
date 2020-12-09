@@ -1,0 +1,3 @@
+create table bookings(start_time time(0) NOT NULL, end_time time(0) not null,rent int NOT NULL default 0,id INT NOT NULL,date date not null,car_id INT NOT null,username VARCHAR(25),foreign key (car_id) references cars(id),foreign key (username) references users(username),primary key (id));
+create table insurances(id int not null, price int not null, primary key (id));
+create table insured(id int not null, car_id int, username VARCHAR(25) not null, insurance_id int not null, foreign key(car_id) references cars(id), foreign key(username) references users(username), foreign key(insurance_id) references insurances(id), primary key (id));

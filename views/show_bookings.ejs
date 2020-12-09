@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('header'); %>
+</header>
+
+<main>
+
+
+    <div class="jumbotron">
+
+        <h2>Your Bookings:</h2>
+
+            <% 
+                if(all_options.length == 0){%>
+                    You have no upcomings bookings.
+                <%}
+                else{
+
+                all_options.forEach(opt=>{ %>
+                <br>
+                <strong>Booking date:</strong>  <%=opt.date;%>
+                <br>
+                <strong>car id:</strong>  <%=opt.car_id;%>
+                <br>
+                <strong>car model:</strong>  <%= opt.colour %> <%=opt.model;%>
+                <br>
+                <strong>Rate: </strong>  $<%=opt.rate;%>
+                <br>
+            <% })}; %>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('footer'); %>
+</footer>
+
+</body>
+</html>

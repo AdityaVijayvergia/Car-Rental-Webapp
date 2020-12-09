@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('header'); %>
+</header>
+
+<main>
+
+
+    <div class="login-form jumbotron">
+        <h2>Sign in</h2>
+        <form action="auth" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit">
+        </form>
+        <p1>New User?<a href="register_user">Click to Register!</a></p1>
+    </div>
+</main>
+
+<footer>
+    <%- include('footer'); %>
+</footer>
+
+</body>
+</html>
